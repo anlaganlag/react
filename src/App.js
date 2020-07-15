@@ -28,6 +28,10 @@ export default function App() {
 
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />
+      <hr />
+
+      {list.map(e => <div>{e.title}</div>)}
+
     </div>
   )
 }
