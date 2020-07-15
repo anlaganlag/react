@@ -30,7 +30,15 @@ export default function App() {
       <input id="search" type="text" />
       <hr />
 
-      {list.map(e => <div>{e.title}</div>)}
+      {list.map(e => 
+          <div key={e.objectID}>
+              {e.title}
+          <span><a href={e.url}>{e.title}</a></span>
+          <span>{e.author}</span>
+          <span>{e.num_comments}</span>
+          </div>
+      )}
+  
 
     </div>
   )
